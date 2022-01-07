@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+}
+
+.nav-link {
+    justify-content: space-between;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+.header-container {
+    background: url(assets/img/backgroung.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+.container-hero {
+    background: url(assets/img/backgroung.jpg);
+    background-position: center -90px;
+    background-repeat: no-repeat;
+  }
