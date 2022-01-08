@@ -55,6 +55,7 @@ body {
     background-position: center -90px;
     background-repeat: no-repeat;
     height: 820px;
+    margin-bottom: 100px;
   }
 
   h1 {
@@ -101,31 +102,24 @@ body {
       background-color: black;
   }
 
-  .section-title-skills {
+  .section-title {
       padding: 0 20px;
   }
 
-  .section-skills-stripes{
+  .section-title-stripes{
       display: flex;
       width: 700px;
       height: 80px;
       margin: 0 auto;
-      margin-top: 100px;
+      /* margin-top: 100px; */
   }
 
-  .section-skills-stripe-left{
+  .section-title-stripe{
       height: 2px;
       width: 274px;
       background-color: #BDAE82;
       margin: auto 0;
   }
-
-  .section-skills-stripe-right{
-    height: 2px;
-    width: 274px;
-    background-color: #BDAE82;
-    margin: auto 0;
-}
 
 .skills-list {
     display: flex;
@@ -168,4 +162,119 @@ body {
 
 .skill-title-div {
     margin: 50px auto 20px;
+}
+
+.section-portfolio {
+    height: 1500px;
+}
+
+.seasons {
+    display: flex;
+    width: 895px;
+    height: 55px;
+    margin: 60px auto;
+    justify-content: space-between;
+}
+
+.button {
+    width: 220px;
+    height: 55px;
+    background-color: transparent;
+    color: #BDAE82;
+    border: 2px solid #BDAE82;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.photo-examples {
+    width: 1400px;
+    height: 1145px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px
+}
+
+.player {
+    width: 1400px;
+    height: 705px;
+    margin-top: 60px;
+    background-image: url(assets/img/video-player.jpg);
+}
+
+.play-icon {
+    padding-top: 288px;
+    padding-left: 636px;
+}
+
+.section-price {
+    padding-top: 100px;
+    width: 1440px;
+    height: 845px;
+}
+
+.price {
+   width: 1400px;
+   height: 505px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.price-cart {
+    width: 450px;
+    height: 505px;
+    margin-top: 60px;
+    border: 3px solid #BDAE82;
+}
+
+.price-cart-name {
+    font-family: "Merriweather", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 56px;
+    color: white;
+    margin: 43px auto 20px;
+    text-align: center;
+}
+
+.price-cart-price {
+    font-family: "Merriweather", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+    color: #BDAE82;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.price-cart-text {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+    color: white;
+    text-align: center;
+}
+
+.button-order {
+    width: 220px;
+    height: 55px;
+    background-color: #BDAE82;
+    color: black;
+    border: 2px solid #BDAE82;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.button-order-div {
+    width: 220px;
+    height: 55px;
+    margin: 40px auto 43px;
 }
