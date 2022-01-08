@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html{
+    background-color: black;
+}
+
 body {
     max-width: 1440px;
     margin: 0 auto;
@@ -82,3 +86,86 @@ body {
       height: 330px;
       margin-left: 80px;
   }
+
+  h2 {
+      margin: 0px;
+      font-family: "Merriweather", sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 80px;
+      color: #BDAE82;
+  }
+
+  .section-skills {
+      height: 482px;
+      background-color: black;
+  }
+
+  .section-title-skills {
+      padding: 0 20px;
+  }
+
+  .section-skills-stripes{
+      display: flex;
+      width: 700px;
+      height: 80px;
+      margin: 0 auto;
+      margin-top: 100px;
+  }
+
+  .section-skills-stripe-left{
+      height: 2px;
+      width: 274px;
+      background-color: #BDAE82;
+      margin: auto 0;
+  }
+
+  .section-skills-stripe-right{
+    height: 2px;
+    width: 274px;
+    background-color: #BDAE82;
+    margin: auto 0;
+}
+
+.skills-list {
+    display: flex;
+    margin-top: 60px;
+    width: 1400px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 240px;
+    margin: 0 auto;
+}
+
+.skill-logo {
+    margin: 0 auto;
+}
+
+.skill-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skill-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    width: 280px;
+}
+
+.skill-title-div {
+    margin: 50px auto 20px;
+}
