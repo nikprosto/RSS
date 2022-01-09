@@ -6,6 +6,10 @@ html{
     background-color: black;
 }
 
+a:hover {
+    color: #BDAE82;
+}
+
 body {
     max-width: 1440px;
     margin: 0 auto;
@@ -392,6 +396,14 @@ textarea {
 .social-link {
     display: block;
     padding-top: 9px;
+}
+
+svg {
+    fill: white;
+}
+
+svg:hover {
+    fill: #BDAE82;
 }
 
 .footer-div {
