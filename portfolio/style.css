@@ -111,7 +111,6 @@ body {
       width: 700px;
       height: 80px;
       margin: 0 auto;
-      /* margin-top: 100px; */
   }
 
   .section-title-stripe{
@@ -211,7 +210,6 @@ body {
 
 .section-price {
     padding-top: 100px;
-    width: 1440px;
     height: 845px;
 }
 
@@ -280,7 +278,6 @@ body {
 }
 
 .section-contacts {
-    width: 1440px;
     height: 700px;
     background-image: url(assets/img/contacts.jpg);
 }
@@ -288,6 +285,9 @@ body {
 .contacts-main-div {
     width: 450px;
     height: 445px;
+    padding-top: 60px;
+    padding-right: 20px;
+    margin-left: auto;
 }
 
 input {
@@ -350,10 +350,52 @@ textarea {
     font-size: 20px;
     line-height: 40px;
     color: #BDAE82;
-    text-align: justify;
 }
 
-.contacts-main-div {
-    margin: 0px 20px 195px 970px;
-    padding-top: 60px;
+.footer {
+    height: 150px;
+}
+
+.github {
+    width: 182px;
+    height: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.rss {
+    width: 211px;
+    height: 50px;
+}
+
+.social {
+    width: 188px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-link {
+    display: block;
+    padding-top: 9px;
+}
+
+.footer-div {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
 }
