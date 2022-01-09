@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -191,8 +191,17 @@
                 </div>
             </section>
 
-            <section class="section" id="contacts">
-                <h2 class="section-title"></h2>
+            <section class="section-contacts" id="contacts">
+                <div class="contacts-main-div">
+                    <h2>Contact me</h2>
+                    <input class="message-email" type="email" name="email" placeholder="E-mail" minlength="2" maxlength="100">
+                    <input class="message-tel" type="tel" name="tel" placeholder="Phone" minlength="7" maxlength="20">
+                    <textarea class="message" id="note" name="note" placeholder="Message" cols="20" rows="4"></textarea>
+                    <form>
+                        <button name="order" type="button" class="button-order">Send message</button>
+                    </form>
+                </div>
+                
             </section>
         </div>
     </main>

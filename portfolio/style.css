@@ -278,3 +278,82 @@ body {
     height: 55px;
     margin: 40px auto 43px;
 }
+
+.section-contacts {
+    width: 1440px;
+    height: 700px;
+    background-image: url(assets/img/contacts.jpg);
+}
+
+.contacts-main-div {
+    width: 450px;
+    height: 445px;
+}
+
+input {
+    display: block;
+    background: transparent;
+    border: 2px solid #BDAE82;
+    width: 450px;
+    height: 50px;
+}
+
+textarea {
+    resize: none;
+    background: transparent;
+    border: 2px solid #BDAE82;
+    width: 450px;
+    height: 100px;
+}
+
+.message-tel {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: #BDAE82;
+}
+
+.message-tel::placeholder {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: #BDAE82;
+}
+
+.message-email {
+    padding-left: 20px;
+    padding-top: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.message-email::placeholder {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: #BDAE82;
+}
+
+.message {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.message::placeholder {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: #BDAE82;
+    text-align: justify;
+}
+
+.contacts-main-div {
+    margin: 0px 20px 195px 970px;
+    padding-top: 60px;
+}
