@@ -71,7 +71,6 @@ body {
 }
 
 .lang-toggle {
-    /* margin: 20px 0; */
     text-decoration: none;
     text-decoration-color: white;
     color: white;
@@ -244,7 +243,7 @@ body {
 
   @media (max-width: 768px) {
     .section-skills {
-        height: 649px;
+        min-height: 649px;
         background-color: black;
     }
   }
@@ -255,7 +254,7 @@ body {
 
   .section-title-stripes{
       display: flex;
-      width: 700px;
+      max-width: 700px;
       height: 80px;
       margin: 0 auto;
   }
@@ -263,7 +262,7 @@ body {
   @media (max-width: 768px) {
     .section-title-stripes{
         display: flex;
-        width: 364px;
+        max-width: 364px;
         height: 80px;
         margin: 0 auto;
     }
@@ -379,14 +378,14 @@ body {
 
 @media (max-width: 768px) {
     .section-portfolio {
-        height: 3870px;
+        min-height: 3870px;
     }
 }
 
 .seasons {
     display: flex;
-    width: 895px;
-    height: 55px;
+    max-width: 895px;
+    min-height: 55px;
     margin: 60px auto;
     justify-content: space-between;
 }
@@ -395,8 +394,8 @@ body {
     .seasons {
         display: flex;
         flex-wrap: wrap;
-        width: 445px;
-        height: 115px;
+        max-width: 445px;
+        min-height: 115px;
         margin: 50px auto;
     }
 }
@@ -424,11 +423,18 @@ body {
 
 @media (max-width: 768px) {
     .photo-examples {
-        width: 450px;
-        height: 3485px;
+        max-width: 450px;
+        min-height: 3485px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 450px) {
+    img {
+        max-width: 100%;
+        max-height: max-content;
     }
 }
 
@@ -466,7 +472,6 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    position: absolute;
 }
 
 @media (max-width: 768px) {
@@ -504,8 +509,8 @@ body {
 
 @media (max-width: 768px) {
     .price {
-        width: 420px;
-        height: 1615px;
+        max-width: 420px;
+        min-height: 1615px;
         display: flex;
         flex-wrap: wrap;
         margin: 0 auto;
@@ -521,10 +526,16 @@ body {
 
 @media (max-width: 768px) {
     .price-cart {
-        width: 420px;
+        max-width: 420px;
         height: 505px;
         margin-top: 50px;
         border: 3px solid #BDAE82;
+    }
+}
+
+@media (max-width: 420px) {
+    .price-cart {
+        max-width: 300px;
     }
 }
 
@@ -574,13 +585,13 @@ body {
 
 .button-order-div {
     margin-top: 40px;
-    margin-left: 115px;
+    /* margin-left: 115px; */
+    text-align: center;
 }
 
 @media (max-width: 768px) {
     .button-order-div {
         margin-top: 40px;
-        margin-left: 100px;
     }
 }
 
@@ -598,19 +609,22 @@ body {
 }
 
 .contacts-main-div {
-    width: 450px;
+    max-width: 450px;
     height: 445px;
     padding-top: 60px;
-    padding-right: 20px;
     margin-left: auto;
 }
 
 @media (max-width: 768px) {
     .contacts-main-div {
-        width: 450px;
-        height: 429px;
+        max-width: 450px;
+        min-height: 429px;
         padding-top: 60px;
         margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -648,8 +662,14 @@ input {
         display: block;
         background: rgba(0, 0, 0, 0.5);
         border: 2px solid #BDAE82;
-        width: 450px;
+        max-width: 450px;
         height: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    input {
+        max-width: 300px;
     }
 }
 
@@ -666,14 +686,20 @@ textarea {
         resize: none;
         background: rgba(0, 0, 0, 0.5);
         border: 2px solid #BDAE82;
-        width: 450px;
+        max-width: 450px;
         height: 100px;
+    }
+}
+
+@media (max-width: 450px) {
+    textarea {
+        max-width: 300px;
     }
 }
 
 @media (max-width: 768px) {
     .section-contacts-button {
-        margin-left: 115px;
+        text-align: center;
     }
 }
 
