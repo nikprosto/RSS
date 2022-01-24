@@ -31,6 +31,7 @@ body.lock {
 .nav {
     display: flex;
     flex-direction: row;
+    height: 90px;
 }
 
 .logo {
@@ -105,7 +106,7 @@ body.lock {
         width: 50px;
         height: 28px;
         cursor: pointer;
-        margin-right: 64px;
+        margin-right: 44px;
         margin-left: 20px;
     }
     .menu-icon span,
@@ -280,6 +281,7 @@ body.lock {
         font-size: 20px;
         line-height: 25px;
         margin-bottom: 60px;
+        margin-top: 18px;
     }
   }
 
@@ -349,6 +351,7 @@ body.lock {
     .section-skills {
         min-height: 649px;
         background-color: black;
+        margin-bottom: 69px;
     }
   }
 
@@ -502,6 +505,7 @@ body.lock {
         max-width: 445px;
         min-height: 115px;
         margin: 50px auto;
+        margin-bottom: 60px;
     }
 }
 
@@ -534,6 +538,7 @@ body.lock {
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
+        gap: 20px;
     }
 }
 
@@ -558,8 +563,8 @@ body.lock {
 
 @media (max-width: 768px) {
     .player {
-        height: 418px;
-        margin-top: 50px;
+        min-height: 418px;
+        margin-top: 52px;
         background-image: url(assets/img/video-player768.jpg);
         background-position: 0px;
         background-repeat: no-repeat;
@@ -597,8 +602,10 @@ body.lock {
 
 @media (max-width: 768px) {
     .section-price {
-        padding-top: 100px;
-        height: 1905px;
+        margin-top: 79px;
+        /* padding-top: 100px; */
+        height: 1805px;
+        margin-bottom: 20px;
     }
 }
 
@@ -713,6 +720,7 @@ body.lock {
 
 @media (max-width: 768px) {
     .section-contacts {
+        margin-top: 0px;
         height: 600px;
         background-image: url(assets/img/contacts768.jpg);
     }
@@ -729,7 +737,7 @@ body.lock {
 @media (max-width: 768px) {
     .contacts-main-div {
         max-width: 450px;
-        min-height: 429px;
+        min-height: 529px;
         padding-top: 60px;
         margin: 0 auto;
         text-align: center;
