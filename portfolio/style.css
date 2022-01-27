@@ -7,6 +7,10 @@ html{
     scroll-behavior: smooth;
 }
 
+html.light {
+    background-color: white;
+}
+
 a:hover {
     color: #BDAE82;
 }
@@ -14,7 +18,6 @@ a:hover {
 body {
     max-width: 1440px;
     margin: 0 auto;
-    /* padding: 0 20px; */
 }
 
 body.lock {
@@ -94,6 +97,14 @@ body.lock {
     margin: 0 9px;
 }
 
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 21px;
+}
+
 .menu-icon {
     display: none;
 }
@@ -118,6 +129,11 @@ body.lock {
         height: 3px;
         transition: all 0.3s ease 0s;
         background-color: white;
+    }
+    .menu-icon.light.active span,
+    .menu-icon.light.active::before,
+    .menu-icon.light.active::after {
+        background-color: black;
     }
     .menu-icon::before,
     .menu-icon::after {
@@ -157,6 +173,11 @@ body.lock {
     }
     .nav.active {
         right: 0;
+        background-color: black;
+    }
+    .nav.light.active {
+        right: 0;
+        background-color: white;
     }
     .nav-list {
         flex-direction: column;
@@ -169,10 +190,13 @@ body.lock {
     .header-menu {
         margin-top: 31px;
     }
-    .nav-link {
+    .nav-link.active {
         font-size: 35px;
         line-height: 72.5px;
         font-weight: 400;
+    }
+    .nav-link.active.light {
+        color: black;
     }
     .nav-item {
         margin-bottom: 16px;
@@ -344,19 +368,25 @@ body.lock {
 
   .section-skills {
       min-height: 482px;
-      background-color: black;
+  }
+
+  .section-skills.light {
+      background-color: white;
   }
 
   @media (max-width: 768px) {
     .section-skills {
         min-height: 649px;
-        background-color: black;
         margin-bottom: 69px;
     }
   }
 
   .section-title {
       padding: 0 20px;
+  }
+
+  .section-title.light {
+      color: black;
   }
 
   .section-title-stripes{
@@ -382,12 +412,19 @@ body.lock {
       margin: auto 0;
   }
 
+  .section-title-stripe.light {
+    background-color: black;
+}
+
   @media (max-width: 768px) {
     .section-title-stripe{
         height: 2px;
         max-width: 117px;
         background-color: #BDAE82;
         margin: auto 0;
+    }
+    .section-title-stripe.light {
+        background-color: black;
     }
   }
 
@@ -446,6 +483,10 @@ body.lock {
     text-align: center;
 }
 
+.skill-title.light {
+    color: black;
+}
+
 .skill-text {
     font-family: "Inter", sans-serif;
     font-weight: 400;
@@ -455,6 +496,10 @@ body.lock {
     margin: 0 auto;
     text-align: center;
     width: 280px;
+}
+
+.skill-text.light {
+    color: black;
 }
 
 @media (max-width: 768px) {
@@ -522,8 +567,11 @@ body.lock {
     cursor: pointer;
 }
 
+.button.light {
+    color: black;
+}
+
 .photo-examples {
-    /* max-width: 1400px; */
     min-height: 1145px;
     display: flex;
     flex-wrap: wrap;
@@ -666,6 +714,10 @@ body.lock {
     text-align: center;
 }
 
+.price-cart-name.light {
+    color: black;
+}
+
 .price-cart-price {
     font-family: "Merriweather", sans-serif;
     font-weight: 700;
@@ -685,6 +737,10 @@ body.lock {
     line-height: 36px;
     color: white;
     text-align: center;
+}
+
+.price-cart-text.light {
+    color: black;
 }
 
 .button-order {
@@ -871,6 +927,7 @@ textarea {
 .footer {
     height: 150px;
     padding: 0 20px;
+    background-color: black;
 }
 
 @media (max-width: 768px) {
@@ -968,5 +1025,3 @@ svg:hover {
         align-items: center;
     }
 }
-
-
