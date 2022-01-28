@@ -675,24 +675,20 @@ body.lock {
 
 .section-price {
     margin-top: 100px;
-    /* height: 845px; */
 }
 
 @media (max-width: 768px) {
     .section-price {
         margin-top: 79px;
-        /* padding-top: 100px; */
         height: 1805px;
         margin-bottom: 20px;
     }
 }
 
 .price {
-   /* max-width: 1400px; */
    min-height: 505px;
    display: flex;
    justify-content: space-around;
-   /* margin-left: 23px; */
 }
 
 @media (max-width: 1439px) {
@@ -788,7 +784,6 @@ body.lock {
 
 .button-order-div {
     margin-top: 40px;
-    /* margin-left: 115px; */
     text-align: center;
 }
 

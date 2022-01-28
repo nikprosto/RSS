@@ -59,6 +59,44 @@ if (themeToggle) {
     })
 }
 
+// const button = document.querySelectorAll('.button');
+// if (button) {
+//     button.forEach (x => x.addEventListener('click', function(q) {
+//         button.forEach(x => x.classList.remove('active'))
+//     }))
+// }
+
 const button = document.querySelectorAll('.button');
+const portfolioImages = document.querySelectorAll('.photo')
+if (button) {
+    button.forEach (x => x.addEventListener('click', buttonClick));
+    
+    function buttonClick(e) {
+        const buttonClick = e.target;
+        if (button) {
+            button.forEach(x => x.classList.remove('active'));
+            e.target.classList.add('active');
+        }
+        if (e.target.classList.contains('winter')) {
+            portfolioImages.forEach((img, index) => img.src = `assets/img/winter/${index + 1}.jpg`);
+        }
+        if (e.target.classList.contains('spring')) {
+            portfolioImages.forEach((img, index) => img.src = `assets/img/spring/${index + 1}.jpg`);
+        }
+        if (e.target.classList.contains('summer')) {
+            portfolioImages.forEach((img, index) => img.src = `assets/img/summer/${index + 1}.jpg`);
+        }
+        if (e.target.classList.contains('autumn')) {
+            portfolioImages.forEach((img, index) => img.src = `assets/img/autumn/${index + 1}.jpg`);
+        }
+    }
+}
 
+// if (button) {
+//     button.forEach (x => x.addEventListener('click', changeImage));
 
+//     function changeImage (e) {
+//         const buttonClick = e.target;
+        
+//     }
+// }
