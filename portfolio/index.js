@@ -27,6 +27,12 @@ if (navLinks.length > 0) {
     }
 }
 
+if (navLink) {
+    navLink.forEach (x => x.addEventListener('click', function(q) {
+        navLink.forEach(x => x.classList.remove('active'));
+    }))
+}
+
 const themeToggle = document.querySelector ('.theme-toggle');
 const html = document.querySelector ('.html');
 const skillTitle = document.querySelectorAll ('.skill-title');
