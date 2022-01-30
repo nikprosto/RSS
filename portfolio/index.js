@@ -91,13 +91,14 @@ if (langToggle) {
     }))
 }
 
-function getTranslate(ru) {
-    const langToggleClick = e.target;
-        if (langToggle.classList.contains('active')) {
-            const translateElement = document.querySelectorAll ('[data-i18n]')
-            translateElement.forEach ()
-        }
+const en = document.querySelector('.en');
+const ru = document.querySelector('.ru');
+const translateElement = document.querySelectorAll ('[data-i18n]');
+function getTranslate(language) {
+    translateElement.forEach(x => x.textContent = i18Obj[language][x.dataset.i18n]);
 };
+en.addEventListener ('click', () => getTranslate('en'));
+ru.addEventListener ('click', () => getTranslate('ru'));
 
 const iconMenu = document.querySelector ('.menu-icon');
 const nav = document.querySelector ('.nav');
