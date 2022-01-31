@@ -615,9 +615,9 @@ body.lock {
 
 @media (max-width: 439px) {
     .seasons {
-        /* padding-left: 50px; */
         justify-content: center;
         align-items: center;
+        gap: 10px;
     }
 }
 
