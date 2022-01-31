@@ -142,6 +142,8 @@ if (navLink) {
 
 const themeToggle = document.querySelector ('.theme-toggle');
 const html = document.querySelector ('.html');
+const sun = document.querySelector ('.sun');
+const moon = document.querySelector ('.moon');
 const skillTitle = document.querySelectorAll ('.skill-title');
 const skillText = document.querySelectorAll ('.skill-text');
 const sectionTitle = document.querySelectorAll ('.section-title');
@@ -163,6 +165,13 @@ if (themeToggle) {
         buttonSeasons.forEach(x => x.classList.toggle('light'));
         priceCartName.forEach(x => x.classList.toggle('light'));
         priceCartText.forEach(x => x.classList.toggle('light'));
+        if (themeToggle.classList.contains('light')) {
+            moon.classList.remove('off');
+            sun.classList.add('off');
+        } else {
+            sun.classList.remove('off');
+            moon.classList.add('off');
+        }
     })
 }
 
@@ -192,6 +201,7 @@ if (button) {
     }
 }
 
+let themeIcon;
 function setLocalStorage() {
     if (ru.classList.contains('active')) {
         lang = 'ru';
@@ -199,14 +209,15 @@ function setLocalStorage() {
         lang = 'en';
     }
     localStorage.setItem('lang', lang);
+    
     if (themeToggle.classList.contains('light')) {
         theme = 'light';
     } else {
         theme = 'dark';
     }
     localStorage.setItem('theme', theme);
-  }
-  window.addEventListener('beforeunload', setLocalStorage);
+}
+window.addEventListener('beforeunload', setLocalStorage);
 
 
 function getLocalStorage() {
@@ -235,6 +246,8 @@ function getLocalStorage() {
     buttonSeasons.forEach(x => x.classList.add('light'));
     priceCartName.forEach(x => x.classList.add('light'));
     priceCartText.forEach(x => x.classList.add('light'));
+    moon.classList.remove('off');
+    sun.classList.add('off');
   }
 }
 window.addEventListener('load', getLocalStorage);

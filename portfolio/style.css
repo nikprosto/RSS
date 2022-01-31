@@ -115,6 +115,14 @@ body.lock {
     margin-right: 21px;
 }
 
+.sun.off {
+    display: none;
+}
+
+.moon.off {
+    display: none;
+}
+
 .menu-icon {
     display: none;
 }
