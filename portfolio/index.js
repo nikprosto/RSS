@@ -80,6 +80,10 @@ const i18Obj = {
       'send-message': 'Отправить'
     }
   }
+
+let lang;
+let theme = 'dark';
+
 const langToggle = document.querySelectorAll('.lang-toggle')
 if (langToggle) {
     langToggle.forEach (x => x.addEventListener('click', function langToggleClick(e) {
@@ -96,9 +100,15 @@ const ru = document.querySelector('.ru');
 const translateElement = document.querySelectorAll ('[data-i18n]');
 function getTranslate(language) {
     translateElement.forEach(x => x.textContent = i18Obj[language][x.dataset.i18n]);
-};
+//     if (ru.classList.contains('active')) {
+//     lang = 'ru';
+// } else {
+//     lang = 'en';
+// }
+}
 en.addEventListener ('click', () => getTranslate('en'));
 ru.addEventListener ('click', () => getTranslate('ru'));
+
 
 const iconMenu = document.querySelector ('.menu-icon');
 const nav = document.querySelector ('.nav');
@@ -158,6 +168,11 @@ if (themeToggle) {
         buttonSeasons.forEach(x => x.classList.toggle('light'));
         priceCartName.forEach(x => x.classList.toggle('light'));
         priceCartText.forEach(x => x.classList.toggle('light'));
+        if (themeToggle.classList.contains('light')) {
+            theme = 'light';
+        } else {
+            theme = 'dark';
+        }
     })
 }
 
@@ -186,3 +201,32 @@ if (button) {
         }
     }
 }
+
+function setLocalStorage() {
+    if (ru.classList.contains('active')) {
+        lang = 'ru';
+    } else {
+        lang = 'en';
+    }
+    localStorage.setItem('lang', lang);
+  }
+  window.addEventListener('beforeunload', setLocalStorage);
+
+
+function getLocalStorage() {
+  if(localStorage.getItem('lang')) {
+    const langRestore = localStorage.getItem('lang');  
+    getTranslate(langRestore);
+    console.log(langRestore);
+    console.log(ru);
+    if (langRestore == ru.textContent) {
+        langToggle.forEach(x => x.classList.remove('active'));
+        ru.classList.add('active');
+        console.log(ru);
+    }
+  } else {
+        langToggle.forEach(x => x.classList.remove('active'));
+        en.classList.add('active');
+  }
+}
+window.addEventListener('load', getLocalStorage);
