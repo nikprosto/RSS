@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    background-color: black;
+}
+
+.header-container {
+    display: flex;
+    max-width: 1440px;
+    height: 60px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-logo-svg {
+    fill: #BDAE82;
+    margin-left: 30px;
+}
+
+.header-logo-svg:hover {
+    fill: white;
+    transition: 0.5s;
+}
+
+.header-ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.header-li {
+    padding: 0 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+}
+
+.header-li:hover {
+    color: #BDAE82;
+    transition: 1s;
+}
+
+.main {
+    background-image: url(./assets/img/forest.jpg);
+    height: calc(100vh - 120px);
+    background-size: cover;
+}
+
+.footer {
+    background-color: black;
+    height: 60px;
+}
+
+.footer-container {
+    display: flex;
+    max-width: 1440px;
+    height: 60px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.footer-github {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-text {
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+.github-link {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-rss {
+    margin-left: auto;
+}
+
+.footer-logo-svg {
+    fill: white;
+}
+
+.footer-logo-svg:hover {
+    fill: #BDAE82;
+    transition: 0.5s;
+}
