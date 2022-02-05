@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+}
+
 .header {
     width: 100%;
     background-color: black;
@@ -77,6 +81,7 @@
 
 .button.active {
     background-image: url(assets/svg/pause.svg);
+    transition: 0.5s;
 }
 
 .button:hover {
