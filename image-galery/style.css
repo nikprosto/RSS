@@ -57,17 +57,24 @@ button:before {
     color: black;
 }
 
-.main-container {
+.main {
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
-.gallery-img {
-    width: 350px;
-    height: auto;
+.div-photo {
+    width: 400px;
+    height: 300px;
+}
+
+.photo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .footer-container {
