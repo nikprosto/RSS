@@ -1,14 +1,15 @@
-const url = 'https://api.unsplash.com/search/photos?query=cats&per_page=30&orientation=landscape&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA'
+const url = 'https://api.unsplash.com/search/photos?query=random&per_page=30&orientation=landscape&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA'
 const main = document.querySelector('main');
+const form = document.querySelector('.form');
+const search = document.querySelector('.search');
 
 function getData() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        showData(data.results);
+    showData(data.results);
       });
-  }
+}
 
 function showData(data) {
     main.innerHTML = '';
@@ -27,3 +28,17 @@ function showData(data) {
 }
 
 getData();
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const searchTerm = search.value;
+    const searchURL = `https://api.unsplash.com/search/photos?query=${searchTerm}&per_page=30&orientation=landscape&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA`
+
+    if (searchTerm) {
+        fetch(searchURL)
+        .then((res) => res.json())
+        .then((data) => {
+        showData(data.results);
+        });
+    }
+})
