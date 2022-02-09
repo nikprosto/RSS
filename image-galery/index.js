@@ -23,14 +23,26 @@ function showData(data) {
     main.innerHTML = '';
     data.forEach(photo => {
         const {urls, alt_description} = photo;
+        
         const div = document.createElement('div');
         div.classList.add('div-photo');
         main.append(div);
+
+        const modalDiv = document.createElement('div');
+        modalDiv.classList.add('modal-div');
+        main.append(modalDiv);
+
         const img = document.createElement('img');
         img.classList.add('photo');
-        img.src = urls.regular;
+        img.src = urls.small;
         img.alt = alt_description;
         div.appendChild(img);
+
+        const modalImg = document.createElement('img');
+        modalImg.classList.add('modal-img');
+        modalImg.src = urls.regular;
+        modalImg.alt = alt_description;
+        modalDiv.appendChild(modalImg);
     });
 }
 
