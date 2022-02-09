@@ -1,16 +1,24 @@
-const url = 'https://api.unsplash.com/search/photos?query=random&per_page=30&orientation=landscape&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA'
+let randomPage = getRandomArbitrary (1, 334);
+const url = `https://api.unsplash.com/search/photos?page=${randomPage}&query=cats&per_page=30&orientation=landscape&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA`
 const main = document.querySelector('main');
 const form = document.querySelector('.form');
 const search = document.querySelector('.search');
 
+// generate random page number
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+// receive data from API
 function getData() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
     showData(data.results);
-      });
+    });
 }
 
+// dispay pictures from API on the page
 function showData(data) {
     main.innerHTML = '';
     data.forEach(photo => {
@@ -24,16 +32,16 @@ function showData(data) {
         img.alt = alt_description;
         div.appendChild(img);
     });
-
 }
 
+// call main function
 getData();
 
+// search
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const searchTerm = search.value;
-    const searchURL = `https://api.unsplash.com/search/photos?query=${searchTerm}&per_page=30&orientation=landscape&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA`
-
+    const searchURL = `https://api.unsplash.com/search/photos?page=${randomPage}&query=${searchTerm}&per_page=30&orientation=landscape&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA`
     if (searchTerm) {
         fetch(searchURL)
         .then((res) => res.json())
