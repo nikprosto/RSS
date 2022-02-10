@@ -40,6 +40,13 @@ input::placeholder {
     font-family: "Inter", sans-serif;
 }
 
+.search {
+    padding: 1rem;
+    padding-right: 45px;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;   
+}
+
 button {
     height: 42px;
     width: 42px;
@@ -47,7 +54,7 @@ button {
     top: 0;
     right: 0;
     cursor: pointer;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 
 button:before {
@@ -60,9 +67,10 @@ button:before {
 .main {
     max-width: 1440px;
     margin: 0 auto;
+    padding-top: 25px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
 }
 
@@ -75,24 +83,61 @@ button:before {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* .modal-div {
-    max-width: 800px;
-    height: auto;
-    display: none;
+.photo:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.modal-div {
+    width: 100%;
+    height: 101%;
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
-    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.733);
+    margin-top: -1px;
+    animation: zoom 0.3s ease-in-out;
 }
 
-.modal-img {
-    display: block;
-    max-width: 700px;
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.modal-div img {
+    max-width: 70%;
+    max-height: 90%;
     object-fit: cover;
-} */
+}
+
+.close-button {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 50px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 32px;
+}
+
+.close-button:hover {
+    color: #BDAE82;
+}
 
 .footer-container {
     display: flex;
