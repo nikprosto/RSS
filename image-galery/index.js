@@ -1,12 +1,13 @@
 let randomPage = getRandomArbitrary (1, 334);
-const url = `https://api.unsplash.com/search/photos?page=${randomPage}&query=cats&per_page=30&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA`
+const url = `https://api.unsplash.com/photos?page=${randomPage}&per_page=30&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA`;
 const main = document.querySelector('main');
 const form = document.querySelector('.form');
 const search = document.querySelector('.search');
 
 // generate random page number
 function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
+    pageNumber = Math.random() * (max - min) + min;
+    return Math.round(pageNumber);
 }
 
 // receive data from API
@@ -14,8 +15,9 @@ function getData() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-    showData(data.results);
-    openPhoto();
+          //showData(data.results) if url is a search
+          showData(data);
+          openPhoto();
     });
 }
 
@@ -49,8 +51,8 @@ form.addEventListener('submit', (e) => {
         fetch(searchURL)
         .then((res) => res.json())
         .then((data) => {
-        showData(data.results);
-        openPhoto();
+            showData(data.results);
+            openPhoto();
         });
     }
 })
@@ -84,8 +86,7 @@ function openPhoto() {
         })
         modalDiv.addEventListener('click', (e) => {
             modalDiv.remove();
-        })
-                        
+        })          
         modalDiv.append(fullPhoto, closeBtn);
     }
 }
