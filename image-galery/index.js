@@ -46,13 +46,18 @@ getData();
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const searchTerm = search.value;
-    const searchURL = `https://api.unsplash.com/search/photos?page=${randomPage}&query=${searchTerm}&per_page=30&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA`
+    const searchURL = `https://api.unsplash.com/search/photos?page=1&query=${searchTerm}&per_page=30&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA`
     if (searchTerm) {
         fetch(searchURL)
         .then((res) => res.json())
         .then((data) => {
-            showData(data.results);
-            openPhoto();
+            const searchURLmodified = `https://api.unsplash.com/search/photos?page=${getRandomArbitrary(1, data.total_pages)}&query=${searchTerm}&per_page=30&client_id=04ufwLfYkUW_uO9OlQOojuE9hQFxR0veEPagGYh0VGA`
+            fetch(searchURLmodified)
+            .then((res) => res.json())
+            .then((data) => {
+                showData(data.results);
+                openPhoto();
+            })           
         });
     }
 })
