@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header {
+    background: url(/shelter/assets/images/main-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    height: 120px;
+    display: flex;
+    padding-top: 60px;
+    margin-bottom: 0;
+}
+
+.header-container {
+    height: 40px;
+    margin: 0 40px;
+    display: flex;
+}
+
+.header-logo {
+    width: 184px;
+}
+
+.header-logo-text1 {
+    font-family: Georgia, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 35.2px;
+    color: #F1CDB3;
+    margin: 0;
+}
+
+.header-logo-text2 {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    color: white;
+}
+
+.header-menu {
+    margin-left: 573px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    padding: 0;
+}
+
+.nav-item {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: white;
+    max-width: 114px;
+}
+
+.nav-item.active {
+    border-bottom: solid #F1CDB3 3px;
+}
+
+.section-doge {
+    background: url(/shelter/assets/images/main-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center -120px;
+    height: 728px;
+}
+
+.section-doge-txt {
+    width: 450px;
+    height: 322px;
+}
+
+.section-title-h2 {
+    margin: 0;
+    font-family: Georgia, sans-serif;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 57.2px;
+    color: #F1CDB3;
+}
