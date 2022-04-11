@@ -439,7 +439,7 @@ h4 {
 
 .foooter {
     height: 350px;
-    background: url(../../assets/images/footer-gradient-background.jpg);
+    background: url(../assets/images/footer-gradient-background.jpg);
     background-repeat: no-repeat;
     padding-top: 40px;
 }
@@ -537,7 +537,7 @@ h4 {
 }
 
 .footer-doge {
-    background: url(../../assets/images/footer-puppy.png);
+    background: url(../assets/images/footer-puppy.png);
     width: 300px;
     height: 310px;
 }
