@@ -12,16 +12,17 @@
     <header class="header">
         <div class="header-container">
             <div class="header-logo">
-                <p class="header-logo-text1">Cozy House</p>
+                <h1 class="header-logo-text1">Cozy House</h1>
                 <p class="header-logo-text2">Shelter for pets in Boston</p>
+                <a href="#"><span></span></a>
             </div>
             <div class="header-menu">
                 <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-item active">About the shelter</li>
-                        <li class="nav-item">Our pets</li>
-                        <li class="nav-item">Help the shelter</li>
-                        <li class="nav-item">Contact</li>
+                        <li class="nav-item"><a class="nav-link" href="/shelter/pages/pets/index.html">Our pets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#help">Help the shelter</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -36,9 +37,9 @@
                     We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!
                 </p>
                 <div class="doge-button-div">
-                    <form>
+                    <a href="#friends">
                         <button name="doge" type="button" class="doge-button">Make a friend</button>
-                    </form>
+                    </a>
                 </div>
             </div>
             <div class="section-doge-img"></div>
@@ -59,17 +60,17 @@
             </div>
         </section>
 
-        <section class="section-friends">
+        <section id="friends" class="section-friends">
             <div class="section-friends-container">
                 <h3 class="section-title-h3 friends">Our friends who
                     are looking for a house
                 </h3>
                 <div class="section-friends-pets-container">
                     <div class="arrow-left">
-                        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="arrow-svg" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M33 25V27H22V29L19 26L22 23V25H33Z" fill="#292929"/>
-                            <path d="M26 50C12.7452 50 2 39.2548 2 26H-2C-2 41.464 10.536 54 26 54V50ZM50 26C50 39.2548 39.2548 50 26 50V54C41.464 54 54 41.464 54 26H50ZM26 2C39.2548 2 50 12.7452 50 26H54C54 10.536 41.464 -2 26 -2V2ZM26 -2C10.536 -2 -2 10.536 -2 26H2C2 12.7452 12.7452 2 26 2V-2Z" fill="#F1CDB3"/>
-                        </svg>                            
+                            <path d="M26 50C12.7452 50 2 39.2548 2 26H-2C-2 41.464 10.536 54 26 54V50ZM50 26C50 39.2548 39.2548 50 26 50V54C41.464 54 54 41.464 54 26H50ZM26 2C39.2548 2 50 12.7452 50 26H54C54 10.536 41.464 -2 26 -2V2ZM26 -2C10.536 -2 -2 10.536 -2 26H2C2 12.7452 12.7452 2 26 2V-2Z"/>
+                        </svg>                             
                     </div>
                     <div class="pet-card">
                         <div class="pet-card-image">
@@ -77,9 +78,7 @@
                         </div>
                         <p class="pet-card-name">Katrine</p>
                         <div class="pet-card-button">
-                            <form>
-                                <button name="pet" type="button" class="pet-button">Learn more</button>
-                            </form>
+                            <button name="pet" type="button" class="pet-button">Learn more</button>
                         </div>
                     </div>
                     <div class="pet-card">
@@ -88,9 +87,7 @@
                         </div>
                         <p class="pet-card-name">Jennifer</p>
                         <div class="pet-card-button">
-                            <form>
-                                <button name="pet" type="button" class="pet-button">Learn more</button>
-                            </form>
+                            <button name="pet" type="button" class="pet-button">Learn more</button>
                         </div>
                     </div>
                     <div class="pet-card">
@@ -99,25 +96,25 @@
                         </div>
                         <p class="pet-card-name">Woody</p>
                         <div class="pet-card-button">
-                            <form>
-                                <button name="pet" type="button" class="pet-button">Learn more</button>
-                            </form>
+                            <button name="pet" type="button" class="pet-button">Learn more</button>
                         </div>
                     </div>
                     <div class="arrow-right">
-                        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="arrow-svg" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 27V25H30V23L33 26L30 29V27H19Z" fill="#292929"/>
-                            <path d="M26 2C39.2548 2 50 12.7452 50 26H54C54 10.536 41.464 -2 26 -2V2ZM2 26C2 12.7452 12.7452 2 26 2V-2C10.536 -2 -2 10.536 -2 26H2ZM26 50C12.7452 50 2 39.2548 2 26H-2C-2 41.464 10.536 54 26 54V50ZM26 54C41.464 54 54 41.464 54 26H50C50 39.2548 39.2548 50 26 50V54Z" fill="#F1CDB3"/>
+                            <path d="M26 2C39.2548 2 50 12.7452 50 26H54C54 10.536 41.464 -2 26 -2V2ZM2 26C2 12.7452 12.7452 2 26 2V-2C10.536 -2 -2 10.536 -2 26H2ZM26 50C12.7452 50 2 39.2548 2 26H-2C-2 41.464 10.536 54 26 54V50ZM26 54C41.464 54 54 41.464 54 26H50C50 39.2548 39.2548 50 26 50V54Z"/>
                         </svg>     
                     </div>
                 </div>
                 <div class="section-pets-button">
-                    <button class="button-all">Get to know the rest</button>
+                    <a href="/shelter/pages/pets/index.html">
+                        <button class="button-all">Get to know the rest</button>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="section-help">
+        <section id="help" class="section-help">
             <div class="section-title-h3 help">How you can help
                 our shelter
             </div>
@@ -231,7 +228,7 @@
             </div>
         </section>
 
-        <section class="section-donate">
+        <section id="donate" class="section-donate">
             <div class="section-donate-container">
                 <div class="donate-img"></div>
                 <div class="donate-text">
@@ -243,7 +240,7 @@
                                 <path d="M25.9815 23H4.01915C1.80285 23 0 21.2046 0 19.0001V3.9999C0 1.79421 1.80285 0 4.01915 0H25.9808C28.196 0 30 1.79421 30 3.9999V19.0001C30.0006 21.2052 28.1972 23 25.9815 23ZM4.01915 1.14285C2.43563 1.14285 1.14836 2.42396 1.14836 3.9999V19.0001C1.14836 20.5755 2.43563 21.8571 4.01915 21.8571H25.9808C27.5638 21.8571 28.8516 20.5755 28.8516 19.0001V3.9999C28.8516 2.42396 27.5638 1.14285 25.9808 1.14285H4.01915ZM20.7037 3.35993C22.1363 3.35993 23.2977 4.51532 23.2977 5.94153C23.2977 7.36774 22.1368 8.52376 20.7037 8.52376C19.2706 8.52376 18.1097 7.36783 18.1097 5.94153C18.1097 4.51523 19.2712 3.35993 20.7037 3.35993ZM24.3204 3.35993C25.7529 3.35993 26.9151 4.51532 26.9151 5.94153C26.9151 7.36774 25.7536 8.52376 24.3204 8.52376C22.8873 8.52376 21.7264 7.36783 21.7264 5.94153C21.7264 4.51523 22.8879 3.35993 24.3204 3.35993ZM3.0861 16.3339H7.8683V18.0481H3.0861V16.3339ZM9.43467 16.3339H14.2175V18.0481H9.43467V16.3339ZM15.782 16.3339H20.5659V18.0481H15.782V16.3339ZM22.1305 16.3339H26.9144V18.0481H22.1305V16.3339ZM3.0861 3.36046H12.1263V5.07474H3.0861V3.36046ZM3.0861 6.76208H7.86946V8.47637H3.0861V6.76208Z" fill="#292929"/>
                             </svg>
                         </div>
-                        <a href="" class="donate-bank-number">8380 2880 8028 8791 7435</a>
+                        <a href="#donate" class="donate-bank-number">8380 2880 8028 8791 7435</a>
                     </div>
                     <h4>Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</h4>
                 </div>
@@ -251,7 +248,7 @@
         </section>
     </main>
 
-    <footer class="foooter">
+    <footer id="contacts" class="foooter">
         <div class="footer-container">
             <div class="footer-contacts">
                 <h3 class="section-title-h3 footer">For questions and suggestions</h3>
@@ -289,7 +286,7 @@
                             <path d="M11 5.33329C7.9674 5.33329 5.50008 7.72585 5.50008 10.6666C5.50008 13.6074 7.9674 16 11 16C14.0327 16 16.5 13.6074 16.5 10.6667C16.5 7.72592 14.0327 5.33329 11 5.33329ZM11 14.6667C8.72537 14.6667 6.87505 12.8724 6.87505 10.6667C6.87505 8.46092 8.72537 6.66667 11 6.66667C13.2747 6.66667 15.125 8.46092 15.125 10.6667C15.125 12.8724 13.2747 14.6667 11 14.6667Z" fill="#F1CDB3"/>
                         </svg>
                     </div>
-                    <h4 class="address-text">1 Central Street, Boston (entrance from the store)</h4>
+                    <a class="address-text" href="https://goo.gl/maps/Ni9UBPdYJLrwgCK36" target="_blank">1 Central Street, Boston (entrance from the store)</a>
                 </div>
                 <div class="footer-address2">
                     <div class="footer-address-icon">
@@ -298,7 +295,7 @@
                             <path d="M11 5.33329C7.9674 5.33329 5.50008 7.72585 5.50008 10.6666C5.50008 13.6074 7.9674 16 11 16C14.0327 16 16.5 13.6074 16.5 10.6667C16.5 7.72592 14.0327 5.33329 11 5.33329ZM11 14.6667C8.72537 14.6667 6.87505 12.8724 6.87505 10.6667C6.87505 8.46092 8.72537 6.66667 11 6.66667C13.2747 6.66667 15.125 8.46092 15.125 10.6667C15.125 12.8724 13.2747 14.6667 11 14.6667Z" fill="#F1CDB3"/>
                         </svg>
                     </div>
-                    <h4 class="address-text">18 South Park, London</h4>
+                    <a class="address-text" href="https://goo.gl/maps/y4JapKnXigMsKEUTA" target="_blank">18 South Park, London</a>
                 </div>
             </div>
             <div class="footer-doge"></div>
