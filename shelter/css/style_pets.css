@@ -214,7 +214,7 @@ span {
 
 .foooter {
     height: 350px;
-    background: url(/shelter/assets/images/footer-gradient-background.jpg);
+    background: url(../../assets/images/footer-gradient-background.jpg);
     background-repeat: no-repeat;
     padding-top: 40px;
 }
@@ -312,7 +312,7 @@ span {
 }
 
 .footer-doge {
-    background: url(/shelter/assets/images/footer-puppy.png);
+    background: url(../../assets/images/footer-puppy.png);
     width: 300px;
     height: 310px;
 }
