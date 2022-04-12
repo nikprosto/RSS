@@ -145,6 +145,14 @@ span {
 .pet-card:hover {
     cursor: url(../assets/icons/cursor-pointer.svg), pointer;
     transition: 0.3s;
+    box-shadow: 0px 1px 30px 10px #F1CDB3;
+}
+
+.pet-card:hover .pet-button {
+    transition: 0.3s;
+    background-color: #FDDCC4;
+    border-color: #FDDCC4;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
 .pet-card-name {
