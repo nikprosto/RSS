@@ -166,7 +166,7 @@ span {
 }
 
 .doge-button:hover {
-    background-color: #eea26b;
+    background-color: #FDDCC4;
     transition: 0.3s;
 }
 
@@ -246,11 +246,10 @@ span {
 }
 
 .pet-card {
-    border-radius: 10px;
+    background-color: #FAFAFA;
 }
 
 .pet-card:hover {
-    background-color: #F1CDB3;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -287,8 +286,8 @@ span {
 }
 
 .pet-button:hover {
-    color: #eea26b;
     transition: 0.3s;
+    background-color: #FDDCC4;
 }
 
 .section-pets-button {
@@ -314,8 +313,7 @@ span {
 
 .button-all:hover {
     transition: 0.3s;
-    background: white;
-    color: #eea26b;
+    background: #FDDCC4;
 }
 
 .section-help {
