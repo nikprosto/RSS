@@ -12,6 +12,10 @@ body {
     margin: 0 auto;
 }
 
+a:hover {
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
+}
+
 .header {
     background: url(../assets/images/main-background.jpg);
     background-repeat: no-repeat;
@@ -286,11 +290,13 @@ span {
     line-height: 22.1px;
     letter-spacing: 0.06em;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .pet-button:hover {
     transition: 0.3s;
     background-color: #FDDCC4;
+    border-color: #FDDCC4;
     cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
@@ -313,11 +319,13 @@ span {
     letter-spacing: 0.06em;
     border: solid #F1CDB3 2px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .button-all:hover {
     transition: 0.3s;
     background: #FDDCC4;
+    border-color: #FDDCC4;
     cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
