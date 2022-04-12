@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    cursor: url(../assets/icons/cursor_normal.svg), auto;
 }
 
 body {
@@ -113,6 +114,7 @@ span {
 .nav-link:hover {
     color: #F1CDB3;
     transition: 0.2s;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
 .main {
@@ -141,7 +143,7 @@ span {
 }
 
 .pet-card:hover {
-    cursor: pointer;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
     transition: 0.3s;
 }
 
@@ -179,6 +181,7 @@ span {
 .pet-button:hover {
     transition: 0.3s;
     background-color: #FDDCC4;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
 .pages {
@@ -200,7 +203,7 @@ span {
 .arrow-svg.active:hover {
     fill: #eea26b;
     transition: 0.3s;
-    cursor: pointer;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
 .section-title-h3 {

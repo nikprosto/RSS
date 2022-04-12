@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    cursor: url(../assets/icons/cursor_normal.svg), auto;
 }
 
 body {
@@ -104,6 +105,7 @@ span {
 .nav-link:hover {
     color: #F1CDB3;
     transition: 0.2s;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
 .section-doge {
@@ -168,6 +170,7 @@ span {
 .doge-button:hover {
     background-color: #FDDCC4;
     transition: 0.3s;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
 .about-container {
@@ -242,7 +245,7 @@ span {
 .arrow-svg:hover {
     fill: #eea26b;
     transition: 0.3s;
-    cursor: pointer;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
 .pet-card {
@@ -250,7 +253,7 @@ span {
 }
 
 .pet-card:hover {
-    cursor: pointer;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
     transition: 0.3s;
 }
 
@@ -288,6 +291,7 @@ span {
 .pet-button:hover {
     transition: 0.3s;
     background-color: #FDDCC4;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
 .section-pets-button {
@@ -314,6 +318,7 @@ span {
 .button-all:hover {
     transition: 0.3s;
     background: #FDDCC4;
+    cursor: url(../assets/icons/cursor-pointer.svg), pointer;
 }
 
 .section-help {
