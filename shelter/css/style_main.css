@@ -26,20 +26,30 @@ a:hover {
   @media screen and (max-width: 768px) {
     .header {
       background: url(../assets/images/main-background-768.jpg);
-      height: 150px;
+      height: 90px;
       background-repeat: no-repeat;
-      background-position: center 0; } }
+      background-position: center 0;
+      padding-top: 30px; } }
 
 .header-container {
   height: 60px;
-  margin: 0 40px;
-  display: flex; }
+  margin-right: 40px;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (max-width: 768px) {
+    .header-container {
+      margin-right: 30px; } }
 
 h1 {
   margin: 0; }
 
 .header-logo {
-  position: relative; }
+  position: relative;
+  margin-left: 40px; }
+  @media screen and (max-width: 768px) {
+    .header-logo {
+      margin-left: 30px; } }
 
 span {
   position: absolute;
@@ -68,7 +78,10 @@ span {
   letter-spacing: 0.1em; }
 
 .header-menu {
-  margin-left: 573px; }
+  margin-right: 40px; }
+  @media screen and (max-width: 768px) {
+    .header-menu {
+      margin-right: 0; } }
 
 .nav-list {
   list-style: none;
@@ -108,18 +121,27 @@ span {
   background: url(../assets/images/main-background.jpg);
   background-repeat: no-repeat;
   background-position: center -180px;
-  height: 728px; }
+  height: 728px;
+  display: flex; }
   @media screen and (max-width: 768px) {
     .section-doge {
       background: url(../assets/images/main-background-768.jpg);
       background-repeat: no-repeat;
-      background-position: center -150px; } }
+      background-position: center -90px;
+      height: 1075px;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px; } }
 
 .section-doge-txt {
   width: 460px;
   height: 322px;
   margin-left: 40px;
   padding-top: 163px; }
+  @media screen and (max-width: 768px) {
+    .section-doge-txt {
+      margin: 0;
+      padding: 0; } }
 
 .section-title-h2 {
   margin: 0;
@@ -138,15 +160,20 @@ span {
   color: white;
   margin: 42px 0; }
 
-.section-doge {
-  display: flex; }
-
 .section-doge-img {
   margin-right: 40px;
   margin-left: auto;
   width: 698px;
   height: 728px;
   background: url(../assets/images/start-screen-puppy.png); }
+  @media screen and (max-width: 768px) {
+    .section-doge-img {
+      background: url(../assets/images/start-screen-puppy-768.png);
+      background-repeat: no-repeat;
+      width: 569px;
+      height: 593px;
+      margin-top: 100px;
+      margin-right: 30px; } }
 
 .doge-button {
   background-color: #F1CDB3;
@@ -161,6 +188,15 @@ span {
   cursor: pointer;
   border: none; }
 
+@media screen and (max-width: 768px) {
+  .doge-button-link {
+    display: block; } }
+
+@media screen and (max-width: 768px) {
+  .doge-button-div {
+    display: flex;
+    justify-content: center; } }
+
 .doge-button:hover {
   background-color: #FDDCC4;
   transition: 0.3s;
@@ -171,6 +207,11 @@ span {
   justify-content: center;
   gap: 120px;
   margin-top: 80px; }
+  @media screen and (max-width: 768px) {
+    .about-container {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 80px; } }
 
 .about-image {
   background: url(../assets/images/about-pets.jpg);
@@ -191,6 +232,9 @@ span {
 .section-title-h3.about {
   width: 370px;
   margin: 14px 0 0 0; }
+  @media screen and (max-width: 768px) {
+    .section-title-h3.about {
+      margin: 0; } }
 
 .section-text {
   font-family: Arial, sans-serif;
@@ -216,6 +260,9 @@ span {
   justify-content: space-between;
   align-items: center;
   margin: 60px auto; }
+  @media screen and (max-width: 768px) {
+    .section-friends-pets-container {
+      max-width: 708px; } }
 
 .arrow-left {
   width: 53px;
@@ -232,6 +279,9 @@ span {
 .pet-card {
   background-color: #FAFAFA; }
 
+@media screen and (max-width: 768px) {
+  .three {
+    display: none; } }
 .pet-card:hover {
   cursor: url(../assets/icons/cursor-pointer.svg), pointer;
   transition: 0.3s;
@@ -245,6 +295,9 @@ span {
   font-weight: 400;
   line-height: 22.72px;
   letter-spacing: 0.06em; }
+
+.pet-card-image {
+  height: 270px; }
 
 .pet-card-button {
   width: 187px;
@@ -306,7 +359,8 @@ span {
 
 .section-help {
   margin-top: 80px;
-  height: 531px; }
+  min-height: 531px;
+  padding-bottom: 100px; }
 
 .section-title-h3.help {
   width: 310px;
@@ -314,9 +368,21 @@ span {
   margin: 0 auto; }
 
 .help-items-container {
-  width: 1026px;
-  height: 281px;
-  margin: 60px auto 0; }
+  max-width: 1029px;
+  min-height: 281px;
+  margin: 60px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px 120px;
+  justify-content: center; }
+  @media screen and (max-width: 788px) {
+    .help-items-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 60px;
+      grid-row-gap: 55px;
+      margin: 60px 69px 0; } }
 
 .help-items-row1 {
   display: flex;
@@ -349,13 +415,18 @@ span {
 .section-donate {
   background-color: #F6F6F6;
   padding-top: 80px;
-  height: 462px; }
+  min-height: 462px; }
 
 .section-donate-container {
   display: flex;
   justify-content: center;
-  height: 462px;
+  min-height: 462px;
   gap: 30px; }
+  @media screen and (max-width: 950px) {
+    .section-donate-container {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-bottom: 100px; } }
 
 .donate-img {
   background: url(../assets/images/donation-dog.png);
@@ -416,17 +487,28 @@ h4 {
   margin: 0; }
 
 .foooter {
-  height: 350px;
+  min-height: 350px;
   background: url(../assets/images/footer-gradient-background.jpg);
-  background-repeat: no-repeat;
-  padding-top: 40px; }
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 1000px) {
+    .foooter {
+      background: url(../assets/images/Footer-768.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center 0; } }
 
 .footer-container {
-  width: 1200px;
-  height: 310px;
+  max-width: 1200px;
+  min-height: 310px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto; }
+  padding: 40px 40px 0;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 1000px) {
+    .footer-container {
+      justify-content: center;
+      gap: 65px 60px;
+      padding: 30px 30px 0; } }
 
 .section-title-h3.footer {
   width: 279px;
@@ -442,6 +524,9 @@ h4 {
   display: flex;
   flex-direction: column;
   gap: 40px; }
+  @media screen and (max-width: 1000px) {
+    .footer-contacts {
+      margin: 0; } }
 
 .footer-contacts-email {
   display: flex;
@@ -475,9 +560,12 @@ h4 {
   align-items: center; }
 
 .footer-address {
-  margin-top: 16px;
+  margin: 16px 20px 0;
   width: 302px;
   height: 234px; }
+  @media screen and (max-width: 1000px) {
+    .footer-address {
+      margin: 0; } }
 
 .footer-address1 {
   display: flex;
