@@ -65,7 +65,7 @@ h1 {
     .header-logo {
       margin-left: 10px; } }
 
-span {
+.logo {
   display: none;
   position: absolute;
   width: 100%;
