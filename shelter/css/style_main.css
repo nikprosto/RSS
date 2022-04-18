@@ -40,6 +40,11 @@ a:hover {
   @media screen and (max-width: 768px) {
     .header-container {
       margin-right: 30px; } }
+  @media screen and (max-width: 688px) {
+    .header-container {
+      display: flex;
+      align-items: center;
+      margin-right: 0; } }
 
 h1 {
   margin: 0; }
@@ -50,8 +55,12 @@ h1 {
   @media screen and (max-width: 768px) {
     .header-logo {
       margin-left: 30px; } }
+  @media screen and (max-width: 688px) {
+    .header-logo {
+      margin-left: 10px; } }
 
 span {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -75,7 +84,9 @@ span {
   font-weight: 400;
   line-height: 15px;
   color: white;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.1em;
+  margin-bottom: 0;
+  margin-top: 10px; }
 
 .header-menu {
   margin-right: 40px; }
@@ -111,7 +122,40 @@ span {
     margin-left: 127px;
     margin-right: auto;
     margin-bottom: auto;
-    padding: 0px; } }
+    padding: 0px; }
+
+  .menu-icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    margin-right: 53px; }
+
+  span {
+    display: inline; }
+
+  .menu-icon span {
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease 0s;
+    background-color: #F1CDB3; }
+
+  .menu-icon span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%); }
+
+  .menu-icon {
+    border-top: solid 2px #F1CDB3;
+    border-bottom: solid 2px #F1CDB3;
+    transition: 0.3s; }
+
+  .menu-icon.active {
+    transition: 0.3s;
+    transform: rotate(90deg); } }
 .nav-item {
   font-family: Arial, sans-serif;
   font-size: 15px;
@@ -155,16 +199,23 @@ span {
       flex-direction: column;
       align-items: center;
       padding-top: 60px; } }
+  @media screen and (max-width: 617px) {
+    .section-doge {
+      height: 733px; } }
 
 .section-doge-txt {
-  width: 460px;
-  height: 322px;
+  max-width: 460px;
+  min-height: 322px;
   margin-left: 40px;
   padding-top: 163px; }
   @media screen and (max-width: 768px) {
     .section-doge-txt {
-      margin: 0;
+      margin-left: 10px;
+      margin-right: 10px;
       padding: 0; } }
+  @media screen and (max-width: 600px) {
+    .section-doge-txt {
+      min-height: 296px; } }
 
 .section-title-h2 {
   margin: 0;
@@ -174,6 +225,20 @@ span {
   line-height: 57.2px;
   color: white;
   width: 310px; }
+  @media screen and (max-width: 688px) {
+    .section-title-h2 {
+      margin: 0 auto;
+      font-size: 33px;
+      line-height: 39.5px;
+      letter-spacing: 0.06em;
+      text-align: center; } }
+  @media screen and (max-width: 400px) {
+    .section-title-h2 {
+      font-size: 25px;
+      line-height: 32.5px;
+      letter-spacing: 0.06em;
+      width: 250px;
+      text-align: center; } }
 
 .section-doge-text {
   font-family: Arial, sans-serif;
@@ -182,6 +247,9 @@ span {
   font-weight: 400;
   color: white;
   margin: 42px 0; }
+  @media screen and (max-width: 400px) {
+    .section-doge-text {
+      text-align: center; } }
 
 .section-doge-img {
   margin-right: 40px;
@@ -197,6 +265,14 @@ span {
       height: 593px;
       margin-top: 100px;
       margin-right: 30px; } }
+  @media screen and (max-width: 617px) {
+    .section-doge-img {
+      background: url(../assets/images/start-screen-puppy-320.png);
+      background-repeat: no-repeat;
+      width: 260px;
+      height: 272px;
+      margin-top: 105px;
+      margin-right: 10px; } }
 
 .doge-button {
   background-color: #F1CDB3;
@@ -235,29 +311,52 @@ span {
       flex-direction: column-reverse;
       align-items: center;
       gap: 80px; } }
+  @media screen and (max-width: 486px) {
+    .about-container {
+      margin-top: 42px;
+      gap: 42px; } }
 
 .about-image {
   background: url(../assets/images/about-pets.jpg);
   width: 300px;
   height: 408px; }
+  @media screen and (max-width: 486px) {
+    .about-image {
+      background: url(../assets/images/about-pets-320.jpg);
+      background-repeat: no-repeat;
+      width: 260px;
+      height: 354px; } }
 
 .about-text-container {
-  width: 430px;
-  height: 380px; }
+  max-width: 430px;
+  min-height: 380px; }
+  @media screen and (max-width: 486px) {
+    .about-text-container {
+      margin: 0 10px; } }
 
 .section-title-h3 {
   font-family: Georgia, sans-serif;
   font-size: 35px;
   font-weight: 400;
   line-height: 45.5px;
-  letter-spacing: 0.06em; }
+  letter-spacing: 0.06em;
+  color: #545454; }
+  @media screen and (max-width: 486px) {
+    .section-title-h3 {
+      font-size: 25px;
+      line-height: 130%; } }
 
 .section-title-h3.about {
-  width: 370px;
+  max-width: 370px;
   margin: 14px 0 0 0; }
   @media screen and (max-width: 768px) {
     .section-title-h3.about {
       margin: 0; } }
+  @media screen and (max-width: 486px) {
+    .section-title-h3.about {
+      width: 290px;
+      margin: 0 auto;
+      text-align: center; } }
 
 .section-text {
   font-family: Arial, sans-serif;
@@ -265,6 +364,9 @@ span {
   line-height: 24px;
   font-weight: 400;
   margin: 25px 0 0 0; }
+  @media screen and (max-width: 486px) {
+    .section-text {
+      text-align: justify; } }
 
 .section-friends {
   height: 877px;
@@ -286,6 +388,9 @@ span {
   @media screen and (max-width: 768px) {
     .section-friends-pets-container {
       max-width: 708px; } }
+  @media screen and (max-width: 720px) {
+    .section-friends-pets-container {
+      justify-content: space-around; } }
 
 .arrow-left {
   width: 53px;
@@ -304,6 +409,9 @@ span {
 
 @media screen and (max-width: 768px) {
   .three {
+    display: none; } }
+@media screen and (max-width: 720px) {
+  .two {
     display: none; } }
 .pet-card:hover {
   cursor: url(../assets/icons/cursor-pointer.svg), pointer;
