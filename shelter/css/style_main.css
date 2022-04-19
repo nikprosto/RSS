@@ -101,7 +101,7 @@ h1 {
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 36px;
   padding: 0; }
 
 @media screen and (max-width: 688px) {
@@ -448,7 +448,8 @@ h1 {
   @media screen and (max-width: 768px) {
     .pet-card-container {
       margin: 0 auto;
-      justify-content: space-evenly; } }
+      justify-content: space-evenly;
+      padding: 0 23px; } }
 
 .arrow-svg {
   fill: #F1CDB3; }
@@ -657,6 +658,9 @@ h1 {
   background-color: #F6F6F6;
   padding-top: 80px;
   min-height: 462px; }
+  @media screen and (max-width: 768px) {
+    .section-donate {
+      padding-top: 78px; } }
   @media screen and (max-width: 486px) {
     .section-donate {
       padding-top: 41px; } }
@@ -664,13 +668,12 @@ h1 {
 .section-donate-container {
   display: flex;
   justify-content: center;
-  min-height: 462px;
   gap: 30px; }
   @media screen and (max-width: 950px) {
     .section-donate-container {
       flex-direction: column-reverse;
       align-items: center;
-      padding-bottom: 98px;
+      padding-bottom: 100px;
       gap: 60px; } }
   @media screen and (max-width: 486px) {
     .section-donate-container {
@@ -770,9 +773,10 @@ h4 {
     h4 {
       text-align: justify; } }
 
-.donate-legal {
-  width: 280px;
-  margin: 0 auto; }
+@media screen and (max-width: 486px) {
+  .donate-legal {
+    width: 280px;
+    margin: 0 auto; } }
 
 .foooter {
   min-height: 350px;
@@ -838,7 +842,10 @@ h4 {
   width: 251px;
   height: 32px;
   gap: 20px;
-  margin: 0 auto; }
+  margin-left: 0; }
+  @media screen and (max-width: 486px) {
+    .footer-contacts-email {
+      margin: 0 auto; } }
 
 .footer-contacts-email-link {
   width: 251px;
@@ -860,7 +867,10 @@ h4 {
   width: 240px;
   height: 32px;
   gap: 20px;
-  margin: 0 auto; }
+  margin-left: 0; }
+  @media screen and (max-width: 486px) {
+    .footer-contacts-phone {
+      margin: 0 auto; } }
 
 .phone-number {
   display: flex;
