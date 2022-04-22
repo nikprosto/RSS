@@ -7,11 +7,14 @@ html {
 
 body {
   max-width: 1280px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 5; }
   @media screen and (max-width: 768px) {
     body {
       max-width: 768px;
       margin: 0 auto; } }
+  body.lock {
+    overflow: hidden; }
 
 a:hover {
   cursor: url(../assets/icons/cursor-pointer.svg), pointer; }
@@ -115,18 +118,22 @@ h1 {
     padding-top: 20px;
     transition: right 0.3s ease 0s;
     overflow: auto;
-    transition: 0.5s; }
+    transition: 0.3s;
+    z-index: 5; }
 
   .nav.active {
     right: 0; }
 
   .nav-list {
     flex-direction: column;
-    margin-top: 134px;
-    margin-left: 127px;
-    margin-right: auto;
-    margin-bottom: auto;
-    padding: 0px; }
+    width: 243px;
+    height: 327px;
+    margin: 248px auto 0;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    z-index: 5; }
 
   .menu-icon {
     z-index: 5;
@@ -167,6 +174,15 @@ h1 {
   font-weight: 400;
   color: white;
   max-width: 114px; }
+  @media screen and (max-width: 688px) {
+    .nav-item {
+      font-family: Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 160%;
+      color: white;
+      letter-spacing: default;
+      max-width: 243px; } }
 
 .nav-item:hover {
   cursor: default; }
@@ -182,12 +198,34 @@ h1 {
   font-weight: 400;
   color: white;
   max-width: 114px; }
+  @media screen and (max-width: 688px) {
+    .nav-link {
+      font-family: Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 160%;
+      color: white;
+      letter-spacing: default;
+      max-width: 243px; } }
 
 .nav-link:hover {
   color: #F1CDB3;
   transition: 0.2s;
   cursor: url(../assets/icons/cursor-pointer.svg), pointer; }
 
+.shadow.active {
+  position: absolute;
+  background-color: #292929;
+  opacity: 60%;
+  width: calc(100% - 320px);
+  height: 100vh;
+  z-index: 1;
+  transform: translateX(100%);
+  animation: slide-in 0.6s forwards; }
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%); } }
 .section-doge {
   background: url(../assets/images/main-background.jpg);
   background-repeat: no-repeat;

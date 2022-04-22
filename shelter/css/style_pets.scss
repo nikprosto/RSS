@@ -10,6 +10,9 @@ html {
 body {
     max-width: 1280px;
     margin: 0 auto;
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 .sticky {
@@ -73,7 +76,6 @@ h1 {
 }
 
 .logo {
-    // display: none;
     position:absolute; 
     width:100%;
     height:100%;
@@ -134,11 +136,14 @@ h1 {
     }
     .nav-list {
         flex-direction: column;
-        margin-top: 134px;
-        margin-left: 127px;
-        margin-right: auto;
-        margin-bottom: auto;
+        width: 243px;
+        height: 327px;
+        margin: 248px auto 0;
         padding: 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        z-index: 5;
     }
     .menu-icon {
         z-index: 5;
@@ -182,6 +187,15 @@ h1 {
     font-weight: 400;
     color: #545454;
     max-width: 114px;
+    @media screen and (max-width: 688px) {
+        font-family: Arial, sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 160%;
+        color: white;
+        letter-spacing: default;
+        max-width: 243px;
+    }
 }
 
 .nav-item:hover {
@@ -200,12 +214,36 @@ h1 {
     font-weight: 400;
     color: #545454;
     max-width: 114px;
+    @media screen and (max-width: 688px) {
+        font-family: Arial, sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 160%;
+        color: white;
+        letter-spacing: default;
+        max-width: 243px;
+    }
 }
 
 .nav-link:hover {
     color: #F1CDB3;
     transition: 0.2s;
     cursor: url(../assets/icons/cursor-pointer.svg), pointer;
+}
+
+.shadow.active {
+    position: absolute;
+    background-color: #292929;
+    opacity: 60%;
+    width: calc(100% - 320px);
+    height: 100vh;
+    z-index: 1;
+    transform: translateX(100%);
+    animation: slide-in 0.6s forwards;
+}
+
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
 }
 
 .main {
