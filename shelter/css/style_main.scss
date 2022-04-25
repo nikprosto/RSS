@@ -550,19 +550,24 @@ h1 {
 
 .pet-card {
     background-color: #FAFAFA;
-}
-
-@media screen and (max-width: 1113px) {
-    .three {
-        display: none;
+    display: none;
+    &.active {
+        display: block;
+    }
+    @media screen and (max-width: 1113px) {
+        &.three {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 720px) {
+        &.two {
+            display: none;
+        }
     }
 }
 
-@media screen and (max-width: 720px) {
-    .two {
-        display: none;
-    }
-}
+
 
 .pet-card:hover {
     cursor: url(../assets/icons/cursor-pointer.svg), pointer;

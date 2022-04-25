@@ -37,70 +37,91 @@ const arrowRight = document.querySelector('.arrow-right');
 const res = await fetch("../../assets/pets.json");
 const pets = await res.json();
 
-let randomNumber = [0, 1, 2, 3, 4, 5, 6, 7];
+
+
+function randomNumbers(max) {
+    function range(upTo) {
+        var result = [];
+        for(var i = 0; i < upTo; i++) result.push(i);
+        return result;
+    }
+    function shuffle(o){
+        for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+    }
+    var myArr = shuffle(range(max));
+    return function() {
+        return myArr.shift();
+    };
+}
+
+
+
+
+
 
 if (window.screen.width >= 1113) {
-    cardGenerator(3);
+    cardGenerator(8);
     arrowRight.addEventListener('click', (e) => {
         const petCard = document.querySelectorAll('.pet-card');
         petCard.forEach(petCard => petCard.remove());
-        cardGenerator(3);
+        cardGenerator(8);
     });
 }
 
 
 
 function cardGenerator (n) {
-//pet card generation
-for (let i = 0; i < n; i++) {
-    // create pet card div
-    let petCard = document.createElement('div');
-    petCard.classList.add('pet-card');
-    //create div for pet image
-    let petCardImageDiv = document.createElement('div');
-    petCardImageDiv.classList.add('pet-card-image');
-    // create pet image
-    let petImg = document.createElement('img');
-    petImg.classList.add('pet-img');
-    petImg.setAttribute('src', `${pets[randomNumber[i]].img}`);
-    petImg.setAttribute('alt', `${pets[randomNumber[i]].name}`);
-    randomNumber.shift();
-    console.log(randomNumber);
-    // append pet image to its div
-    petCardImageDiv.append(petImg);
-    // append pet image div to pet card div
-    petCard.append(petCardImageDiv);
-    // create pet name
-    let petName = document.createElement('p');
-    petName.classList.add('pet-card-name');
-    let petNametext = document.createTextNode(`${pets[i].name}`);
-    petName.append(petNametext);
-    // append pet name to pet card div
-    petCard.append(petName);
-    // create div for button
-    let buttonDiv = document.createElement('div');
-    buttonDiv.classList.add('pet-card-button');
-    // create button
-    let button = document.createElement('button');
-    button.classList.add('pet-button');
-    button.setAttribute('name', 'pet');
-    button.setAttribute('type', 'button');
-    let buttonText = document.createTextNode('Learn more');
-    button.append(buttonText);
-    // append button to its div
-    buttonDiv.append(button);
-    // append button div to pet card div
-    petCard.append(buttonDiv);
-    if (i == 0) {
-        petCard.classList.add('one');
+    var randoms = randomNumbers(8),
+        rand = randoms(),
+        result = [];
+    while (rand != null) {
+        result.push(rand);
+        rand = randoms();
     }
-    if (i == 1) {
-        petCard.classList.add('two');
+    console.log(result);
+    //pet card generation
+    for (let i = 0; i < n; i++) {
+        // create pet card div
+        let petCard = document.createElement('div');
+        petCard.classList.add('pet-card');
+        //create div for pet image
+        let petCardImageDiv = document.createElement('div');
+        petCardImageDiv.classList.add('pet-card-image');
+        // create pet image
+        let petImg = document.createElement('img');
+        petImg.classList.add('pet-img');
+        petImg.setAttribute('src', `${pets[result[i]].img}`);
+        petImg.setAttribute('alt', `${pets[result[i]].name}`);
+        // append pet image to its div
+        petCardImageDiv.append(petImg);
+        // append pet image div to pet card div
+        petCard.append(petCardImageDiv);
+        // create pet name
+        let petName = document.createElement('p');
+        petName.classList.add('pet-card-name');
+        let petNametext = document.createTextNode(`${pets[result[i]].name}`);
+        petName.append(petNametext);
+        // append pet name to pet card div
+        petCard.append(petName);
+        // create div for button
+        let buttonDiv = document.createElement('div');
+        buttonDiv.classList.add('pet-card-button');
+        // create button
+        let button = document.createElement('button');
+        button.classList.add('pet-button');
+        button.setAttribute('name', 'pet');
+        button.setAttribute('type', 'button');
+        let buttonText = document.createTextNode('Learn more');
+        button.append(buttonText);
+        // append button to its div
+        buttonDiv.append(button);
+        // append button div to pet card div
+        petCard.append(buttonDiv);
+        if (i < 3) {
+            petCard.classList.add('active');
+        }
+        // append all to pet card
+        petContainer.append(petCard);
     }
-    if (i == 2) {
-        petCard.classList.add('three');
-    }
-    // append all to pet card
-    petContainer.append(petCard);
-}
 }

@@ -498,14 +498,17 @@ h1 {
   cursor: url(../assets/icons/cursor-pointer.svg), pointer; }
 
 .pet-card {
-  background-color: #FAFAFA; }
+  background-color: #FAFAFA;
+  display: none; }
+  .pet-card.active {
+    display: block; }
+  @media screen and (max-width: 1113px) {
+    .pet-card.three {
+      display: none; } }
+  @media screen and (max-width: 720px) {
+    .pet-card.two {
+      display: none; } }
 
-@media screen and (max-width: 1113px) {
-  .three {
-    display: none; } }
-@media screen and (max-width: 720px) {
-  .two {
-    display: none; } }
 .pet-card:hover {
   cursor: url(../assets/icons/cursor-pointer.svg), pointer;
   transition: 0.3s;
