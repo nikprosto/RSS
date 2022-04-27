@@ -27,6 +27,16 @@ if (iconMenu) {
     )
 }
 
+if (shadow) {
+  shadow.addEventListener('click', function (e) {
+      document.body.classList.toggle('lock');
+      iconMenu.classList.toggle('active');
+      nav.classList.toggle('active');
+      shadow.classList.toggle('active');
+      navLink.forEach(x => x.classList.toggle('active'));
+  })
+}
+
 const navLinks = document.querySelectorAll ('.nav-link');
 if (navLinks.length > 0) {
     navLinks.forEach (navLink => {

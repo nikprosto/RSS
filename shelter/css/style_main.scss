@@ -53,9 +53,6 @@ a:hover {
     display: flex;
     justify-content: space-between;
     @media screen and (max-width: 768px) {
-        margin-right: 30px;
-    }
-    @media screen and (max-width: 688px) {
         display: flex;
         align-items: center;
         margin-right: 0;
@@ -70,9 +67,6 @@ h1 {
     position: relative;
     margin-left: 40px;
     @media screen and (max-width: 768px) {
-        margin-left: 30px;
-    }
-    @media screen and (max-width: 688px) {
         margin-left: 10px;
     }
 }
@@ -121,7 +115,7 @@ h1 {
     padding: 0;
 }
 
-@media screen and (max-width: 688px) {
+@media screen and (max-width: 768px) {
     .nav {
         position: fixed;
         top: 0;
@@ -191,7 +185,7 @@ h1 {
     font-weight: 400;
     color: white;
     max-width: 114px;
-    @media screen and (max-width: 688px) {
+    @media screen and (max-width: 768px) {
         font-family: Arial, sans-serif;
         font-size: 32px;
         font-weight: 400;
@@ -218,7 +212,7 @@ h1 {
     font-weight: 400;
     color: white;
     max-width: 114px;
-    @media screen and (max-width: 688px) {
+    @media screen and (max-width: 768px) {
         font-family: Arial, sans-serif;
         font-size: 32px;
         font-weight: 400;
